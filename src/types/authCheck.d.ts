@@ -1,0 +1,9 @@
+import { Request } from "express";
+import { JwtPayload } from "jsonwebtoken";
+
+interface RequestAuth extends Request {
+  id? : string,
+  token?: string | JwtPayload;
+}
+
+export default RequestAuth;
